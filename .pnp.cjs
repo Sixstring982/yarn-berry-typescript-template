@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/node", "npm:17.0.31"],\
+            ["@yarnpkg/esbuild-plugin-pnp", "virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:3.0.0-rc.4"],\
             ["esbuild", "npm:0.14.38"],\
             ["fs-extra", "npm:10.1.0"],\
             ["ts-node", "virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:10.7.0"],\
@@ -113,6 +114,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.31-d8d26aa013-704618350f.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:17.0.31"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@yarnpkg/esbuild-plugin-pnp", [\
+        ["npm:3.0.0-rc.4", {\
+          "packageLocation": "./.yarn/cache/@yarnpkg-esbuild-plugin-pnp-npm-3.0.0-rc.4-5846a265b3-31793209ec.zip/node_modules/@yarnpkg/esbuild-plugin-pnp/",\
+          "packageDependencies": [\
+            ["@yarnpkg/esbuild-plugin-pnp", "npm:3.0.0-rc.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:3.0.0-rc.4", {\
+          "packageLocation": "./.yarn/__virtual__/@yarnpkg-esbuild-plugin-pnp-virtual-a23e2cd0f7/0/cache/@yarnpkg-esbuild-plugin-pnp-npm-3.0.0-rc.4-5846a265b3-31793209ec.zip/node_modules/@yarnpkg/esbuild-plugin-pnp/",\
+          "packageDependencies": [\
+            ["@yarnpkg/esbuild-plugin-pnp", "virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:3.0.0-rc.4"],\
+            ["@types/esbuild", null],\
+            ["esbuild", "npm:0.14.38"],\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/esbuild",\
+            "esbuild"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -419,6 +443,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slime-mold", "workspace:."],\
             ["@types/fs-extra", "npm:9.0.13"],\
             ["@types/node", "npm:17.0.31"],\
+            ["@yarnpkg/esbuild-plugin-pnp", "virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:3.0.0-rc.4"],\
             ["esbuild", "npm:0.14.38"],\
             ["fs-extra", "npm:10.1.0"],\
             ["ts-node", "virtual:aa05f43bc60f8835fc717eab8a07a78485c749f4ec9a0b1fe1171f73293c12f22ef38eaf419737b97dd4cd643a110ba59314e94521d23ae56e8d180abaa81eec#npm:10.7.0"],\
@@ -468,6 +493,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/swc__wasm",\
             "@types/typescript",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tslib", [\
+        ["npm:1.14.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:1.14.1"]\
           ],\
           "linkType": "HARD"\
         }]\

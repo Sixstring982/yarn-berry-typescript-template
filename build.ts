@@ -2,6 +2,7 @@ import * as esbuild from 'esbuild';
 import * as path from 'path';
 import fsExtra from 'fs-extra';
 import fs from 'fs';
+import { pnpPlugin } from '@yarnpkg/esbuild-plugin-pnp';
 
 const isArgPresent = (arg: string): boolean => process.argv.includes(arg);
 
@@ -34,6 +35,7 @@ esbuild.build({
   entryPoints: [path.join(__dirname, 'src', 'main.ts')],
   bundle: true,
   outdir: OUT_DIR,
+  plugins: [pnpPlugin()],
   watch: !isArgPresent('--watch') ? undefined : {
     onRebuild: (error) => {
       if (error) {
