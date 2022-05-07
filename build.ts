@@ -36,6 +36,8 @@ esbuild.build({
   bundle: true,
   outdir: OUT_DIR,
   plugins: [pnpPlugin()],
+  minify: isArgPresent('--minify'),
+  sourcemap: isArgPresent('--minify') ? undefined : 'inline',
   watch: !isArgPresent('--watch') ? undefined : {
     onRebuild: (error) => {
       if (error) {
