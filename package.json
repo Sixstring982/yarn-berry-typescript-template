@@ -1,0 +1,15 @@
+{
+  "name": "slime-mold",
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^17.0.31",
+    "esbuild": "^0.14.38",
+    "fs-extra": "^10.1.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "build": "ts-node build.ts"
+  }
+}
