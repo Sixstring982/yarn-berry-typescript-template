@@ -3,6 +3,7 @@ import * as path from 'path';
 import fsExtra from 'fs-extra';
 import fs from 'fs';
 import { pnpPlugin } from '@yarnpkg/esbuild-plugin-pnp';
+import { sassPlugin, postcssModules } from 'esbuild-sass-plugin';
 
 const isArgPresent = (arg: string): boolean => process.argv.includes(arg);
 
@@ -35,13 +36,19 @@ esbuild.build({
   entryPoints: [path.join(__dirname, 'src', 'main.ts')],
   bundle: true,
   outdir: OUT_DIR,
-  plugins: [pnpPlugin()],
+  plugins: [
+    // Loads scss files as css modules
+    sassPlugin({
+      transform: postcssModules({}),
+    }),
+    // Loads Yarn Berry pnp modules
+    pnpPlugin(),
+  ],
   minify: isArgPresent('--minify'),
   sourcemap: isArgPresent('--minify') ? undefined : 'inline',
   watch: !isArgPresent('--watch') ? undefined : {
     onRebuild: (error) => {
       if (error) {
-        console.error(error);
         return;
       }
       console.log('Build successful.');

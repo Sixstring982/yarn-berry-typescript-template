@@ -1,0 +1,15 @@
+.styled-span {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: orangered;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.2rem rgba(0, 0, 0, 0.4);
+  transition: color 128ms ease-in-out;
+
+  &:hover {
+    background-color: steelblue;
+  }
+}
