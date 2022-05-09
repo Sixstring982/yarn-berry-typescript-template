@@ -1,5 +1,5 @@
 {
-  "name": "slime-mold",
+  "name": "mixtape",
   "packageManager": "yarn@3.2.0",
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
